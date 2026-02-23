@@ -12,8 +12,15 @@ Deep learning has advanced at an unprecedented pace. This progress has led to a 
 INSTANT compresses both activations and gradients to optimize training efficiency:
 
 * **Forward Pass (Green):** The activation $A_i$ propagates normally in full-rank space. Meanwhile, a compact version, $\hat{A}_i$, is saved for backpropagation to significantly reduce memory consumption.
-* **Backward Pass (Red):** The gradient with respect to the output, $\frac{\partial L}{\partial A_{i+1}}$, is compressed into a low-rank representation, $\frac{\hat{\partial L}}{\partial A_{i+1}}$.
-* **Efficient Computation:** Low-rank operations are then performed using the compressed activation $\hat{A}_i$ and the compressed gradient $\frac{\hat{\partial L}}{\partial A_{i+1}}$, vastly reducing the computational cost of the backward pass.
+* **Backward Pass (Red):** The gradient with respect to the output, 
+  $\frac{\partial L}{\partial A_{i+1}}$, is projected into a low-rank 
+  subspace, yielding a compressed representation 
+  $\widehat{\frac{\partial L}{\partial A_{i+1}}}$.
+
+* **Efficient Computation:** Low-rank operations are then performed 
+  using the compressed activation $\hat{A}_i$ and the compressed gradient 
+  $\widehat{\frac{\partial L}{\partial A_{i+1}}}$, significantly reducing 
+  the computational cost of the backward pass.
 
 <p align="center">
   <img src="figures/intro.png" width="600" alt="Compression of Gradient and Activation"/>
