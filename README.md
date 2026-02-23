@@ -12,18 +12,15 @@ Deep learning has advanced at an unprecedented pace. This progress has led to a 
 INSTANT compresses both activations and gradients to optimize training efficiency:
 
 * **Forward Pass (Green):** The activation $A_i$ propagates normally in full-rank space. Meanwhile, a compact version, $\hat{A}_i$, is saved for backpropagation to significantly reduce memory consumption.
-* **Backward Pass (Red):** The gradient with respect to the output, 
-  $\frac{\partial L}{\partial A_{i+1}}$, is projected into a low-rank 
-  subspace, yielding a compressed representation 
-  $\widehat{\frac{\partial L}{\partial A_{i+1}}}$.
+* **Backward Pass (Red):** The gradient with respect to the output, $\frac{\partial L}{\partial A_{i+1}}$, is projected into a low-rank subspace, yielding a compressed representation 
+  $\widehat{\frac{\partial L}{\partial A\_{i+1}}}$.
 
-* **Efficient Computation:** Low-rank operations are then performed 
-using the compressed activation $\hat{A}_i$ and the compressed gradient 
-$\widehat{\frac{\partial L}{\partial A_{i+1}}}$, significantly reducing 
+* **Efficient Computation:** Low-rank operations are then performed using the compressed activation $\hat{A}\_i$ and the compressed gradient 
+$\widehat{\frac{\partial L}{\partial A\_{i+1}}}$, significantly reducing 
 the computational cost of the backward pass.
 
 <p align="center">
-  <img src="figures/intro.png" width="600" alt="Compression of Gradient and Activation"/>
+  <img src="figures/intro.png" width="900" alt="Compression of Gradient and Activation"/>
 </p>
 
 ---
@@ -33,7 +30,7 @@ the computational cost of the backward pass.
 The low-rank backpropagation algorithm powered by INSTANT streamlines gradient calculations. Instead of relying on **full-rank multiplication** like standard (Vanilla) methods, INSTANT decomposes $\mathbf{x}$ and $\mathbf{g_y}$. This allows it to accurately approximate $\mathbf{g_w}$ and $\mathbf{g_x}$ entirely through **low-rank multiplications**, saving processing power and time.
 
 <p align="center">
-  <img src="figures/low-rank_instant.png" width="600" alt="Low-rank Backpropagation with INSTANT"/>
+  <img src="figures/low-rank_instant.png" width="900" alt="Low-rank Backpropagation with INSTANT"/>
 </p>
 
 # Computer Vision tasks and Language tasks
