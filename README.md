@@ -5,6 +5,7 @@ Official repository for the paper `INSTANT: COMPRESSING GRADIENTS AND ACTIVATION
 
 <details><summary>Abstract</summary>
 Deep learning has advanced at an unprecedented pace. This progress has led to a significant increase in its complexity. However, despite extensive research on accelerating inference, training deep models directly within a resource-constrained budget remains a considerable challenge due to its high computational and memory requirements. In this paper, we introduce INSTANT (compressIng gradieNtS and acTivAtions for resource-efficieNt Training), a method designed to address both the computational and the memory bottlenecks when training. INSTANT reduces resource demands during backpropagation by projecting gradients and activations into a low-rank subspace and performing computation within that compressed representation. Experimental results demonstrate that INSTANT achieves a 15× reduction in computational cost and 32× reduction in activation memory with negligible impact on model performance. 
+</details>
 
 ## Compressing Gradients and Activations
 
