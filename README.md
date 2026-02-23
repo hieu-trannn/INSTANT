@@ -18,9 +18,9 @@ INSTANT compresses both activations and gradients to optimize training efficienc
   $\widehat{\frac{\partial L}{\partial A_{i+1}}}$.
 
 * **Efficient Computation:** Low-rank operations are then performed 
-  using the compressed activation $\hat{A}_i$ and the compressed gradient 
-  $\widehat{\frac{\partial L}{\partial A_{i+1}}}$, significantly reducing 
-  the computational cost of the backward pass.
+using the compressed activation $\hat{A}_i$ and the compressed gradient 
+$\widehat{\frac{\partial L}{\partial A_{i+1}}}$, significantly reducing 
+the computational cost of the backward pass.
 
 <p align="center">
   <img src="figures/intro.png" width="600" alt="Compression of Gradient and Activation"/>
