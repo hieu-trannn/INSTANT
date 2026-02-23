@@ -16,7 +16,7 @@ INSTANT compresses both activations and gradients to optimize training efficienc
 * **Efficient Computation:** Low-rank operations are then performed using the compressed activation $\hat{A}_i$ and the compressed gradient $\frac{\hat{\partial L}}{\partial A_{i+1}}$, vastly reducing the computational cost of the backward pass.
 
 <p align="center">
-  <img src="figures/intro.png" width="300" alt="Compression of Gradient and Activation"/>
+  <img src="figures/intro.png" width="600" alt="Compression of Gradient and Activation"/>
 </p>
 
 ---
@@ -26,7 +26,7 @@ INSTANT compresses both activations and gradients to optimize training efficienc
 The low-rank backpropagation algorithm powered by INSTANT streamlines gradient calculations. Instead of relying on **full-rank multiplication** like standard (Vanilla) methods, INSTANT decomposes $\mathbf{x}$ and $\mathbf{g_y}$. This allows it to accurately approximate $\mathbf{g_w}$ and $\mathbf{g_x}$ entirely through **low-rank multiplications**, saving processing power and time.
 
 <p align="center">
-  <img src="figures/low-rank_instant.png" width="300" alt="Low-rank Backpropagation with INSTANT"/>
+  <img src="figures/low-rank_instant.png" width="600" alt="Low-rank Backpropagation with INSTANT"/>
 </p>
 
 # Computer Vision tasks and Language tasks
