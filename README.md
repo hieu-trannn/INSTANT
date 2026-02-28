@@ -34,7 +34,7 @@ The low-rank backpropagation algorithm powered by INSTANT streamlines gradient c
 </p>
 
 # Computer Vision tasks and Language tasks
-Please follow directory [computer_vision](computer_vision) and [language](language), repectively.
+Please follow directories [computer_vision](computer_vision) and [language](language), respectively.
 
 # References
 If you use this code, plese consider citing this work as:
